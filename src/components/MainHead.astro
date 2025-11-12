@@ -7,8 +7,8 @@ interface Props {
 }
 
 const {
-  title = "romansahl.com",
-  description = "Hi, I'm Roman Sahl and here on my personal site you can find out more about me and my programming projects and experience.",
+  title = "yrsahl.de",
+  description = "Hi, I'm Yannik and here on my personal site you can find out more about me and my programming projects and experience.",
 } = Astro.props;
 ---
 
@@ -27,8 +27,7 @@ const {
 />
 <script is:inline>
   document.addEventListener("astro:before-swap", (ev) => {
-    ev.newDocument.documentElement.classList =
-      document.documentElement.classList;
+    ev.newDocument.documentElement.classList = document.documentElement.classList;
   });
 </script>
 <script>
@@ -36,19 +35,13 @@ const {
     if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
       return localStorage.getItem("theme");
     }
-    return window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
+    return window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
   };
 
-  document.documentElement.classList[
-    getThemePreference() === "dark" ? "add" : "remove"
-  ]("theme-dark");
+  document.documentElement.classList[getThemePreference() === "dark" ? "add" : "remove"]("theme-dark");
 
   document.addEventListener("astro:after-swap", () => {
-    document.documentElement.classList[
-      getThemePreference() === "dark" ? "add" : "remove"
-    ]("theme-dark");
+    document.documentElement.classList[getThemePreference() === "dark" ? "add" : "remove"]("theme-dark");
   });
 
   document.addEventListener("astro:page-load", () => {
@@ -73,10 +66,7 @@ const {
       threshold: 0,
     };
 
-    function observerCallback(
-      entries: IntersectionObserverEntry[],
-      observer: IntersectionObserver,
-    ) {
+    function observerCallback(entries: IntersectionObserverEntry[], observer: IntersectionObserver) {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           if (entry.target instanceof HTMLElement) {
@@ -95,10 +85,7 @@ const {
       });
     }
 
-    const observer = new IntersectionObserver(
-      observerCallback,
-      observerOptions,
-    );
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
 
     const animateEls = document.querySelectorAll("[class*=animate-]");
     animateEls?.forEach((el) => {

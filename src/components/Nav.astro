@@ -18,7 +18,7 @@ const iconLinks: {
 }[] = [
   {
     label: "E-Mail",
-    href: "mailto:contact@romansahl.com",
+    href: "mailto:kontakt@yrsahl.de",
     icon: "envelope",
   },
   {
@@ -32,13 +32,8 @@ const iconLinks: {
 <nav>
   <div class="menu-header">
     <a href="/" class="site-title">
-      <Icon
-        icon="terminal-window"
-        color="var(--accent-regular)"
-        size="1.6em"
-        gradient
-      />
-      Roman Sahl
+      <Icon icon="terminal-window" color="var(--accent-regular)" size="1.6em" gradient />
+      Y.R. Sahl
     </a>
     <menu-button>
       <template>
@@ -64,9 +59,7 @@ const iconLinks: {
               class:list={[
                 "link",
                 {
-                  active:
-                    Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
+                  active: Astro.url.pathname === href || (href !== "/" && Astro.url.pathname.startsWith(href)),
                 },
               ]}
               href={href}
@@ -102,9 +95,7 @@ const iconLinks: {
               class:list={[
                 "link",
                 {
-                  active:
-                    Astro.url.pathname === href ||
-                    (href !== "/" && Astro.url.pathname.startsWith(href)),
+                  active: Astro.url.pathname === href || (href !== "/" && Astro.url.pathname.startsWith(href)),
                 },
               ]}
               href={href}
@@ -156,9 +147,7 @@ const iconLinks: {
       };
 
       // Toggle menu visibility when the menu button is clicked.
-      btn.addEventListener("click", () =>
-        setExpanded(btn.getAttribute("aria-expanded") !== "true"),
-      );
+      btn.addEventListener("click", () => setExpanded(btn.getAttribute("aria-expanded") !== "true"));
 
       // Hide menu button for large screens.
       const handleViewports = (e: MediaQueryList | MediaQueryListEvent) => {

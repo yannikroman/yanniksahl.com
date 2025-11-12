@@ -13,8 +13,7 @@ const degrees: Degree[] = [
     image: "/assets/computer.webp",
     when: "2018 to 2020",
     where: "Studied at HTW Berlin",
-    special:
-      "Specialization in: Advanced Programming, Embedded Systems and IT Security",
+    special: "Specialization in: Advanced Programming, Embedded Systems and IT Security",
     // grade: "Graduated with a final grade of 1.5",
   },
   {
@@ -49,8 +48,7 @@ const experiences: Experience[] = [
     when: "October 2022 to September 2023",
     where: "Berlin",
     company: "DRK e.V.",
-    description:
-      "I underwent training for the EMT role and worked in the ambulance and resuce service.",
+    description: "I underwent training for the EMT role and worked in the ambulance and resuce service.",
   },
   {
     role: "Tutor",
@@ -123,8 +121,7 @@ const skills: Skill[] = [
   },
   {
     field: "Frameworks 🏗️",
-    description:
-      "The frameworks and libraries I've most commonly used over the years.",
+    description: "The frameworks and libraries I've most commonly used over the years.",
     fieldSkill: [
       {
         name: "React",
@@ -224,37 +221,28 @@ skills.forEach((skill) => {
 });
 ---
 
-<BaseLayout title="About | Roman Sahl" description="About Roman Sahl">
+<BaseLayout title="About | Y.R. Sahl" description="About Y.R. Sahl">
   <div transition:animate={animation} class="stack gap-12">
     <main class="wrapper about">
-      <Hero
-        title="About"
-        tagline="Thanks for stopping by! Read below to learn more about myself and my background."
-      />
+      <Hero title="About" tagline="Thanks for stopping by! Read below to learn more about myself and my background." />
       <section class="animate-fade">
         <h2 class="section-title">Background</h2>
         <div class="content">
           <p class="">
-            I like to create things that are both functional and easy to use. On
-            the web that means focussing on both form and function, never
-            forgetting that the user is the most important part of the equation.
+            I like to create things that are both functional and easy to use. On the web that means focussing on both
+            form and function, never forgetting that the user is the most important part of the equation.
           </p>
           <p class="pt-2"></p>
           <p>
-            Every day I strive to become a little bit better at what I do. I
-            believe that learning is a lifelong journey and I am always looking
-            for new opportunities to grow and improve. I am passionate about
-            technology and how it can be used to solve real-world problems.
+            Every day I strive to become a little bit better at what I do. I am passionate about technology and how it
+            can be used to solve real-world problems.
           </p>
         </div>
       </section>
       <section class="animate-fade">
         <h2 class="section-title">Education</h2>
         <div class="content">
-          <p class="mb-6 sm:mb-8">
-            I've completed two Bachelor programs and underwent training to
-            become an EMT. Click the following cards for more information:
-          </p>
+          <p class="mb-6 sm:mb-8">I've completed two Bachelor programs. Click the cards for more information:</p>
           <div class="w-11/12 mx-auto flex gap-8 flex-col lg:flex-row">
             {degrees.map((degree) => <DegreeCard degree={degree} />)}
           </div>
@@ -263,12 +251,8 @@ skills.forEach((skill) => {
       <section class="animate-fade">
         <h2 class="section-title">Expertise</h2>
         <div class="content">
-          <p class="mb-6 sm:mb-8">
-            These are the tools and tech I most often use ranked by proficiency:
-          </p>
-          <div
-            class="p-4 bg-[var(--gray-900)] border border-[var(--gray-600)] rounded-3xl shadow sm:p-6 space-y-8"
-          >
+          <p class="mb-6 sm:mb-8">These are the tools and tech I most often use ranked by proficiency:</p>
+          <div class="p-4 bg-[var(--gray-900)] border border-[var(--gray-600)] rounded-3xl shadow sm:p-6 space-y-8">
             {skills.map((skill) => <SkillCard skill={skill} />)}
           </div>
         </div>
